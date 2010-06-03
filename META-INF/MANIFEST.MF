@@ -1,6 +1,6 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: MxShef
+Bundle-Name: mxShef
 Bundle-SymbolicName: de.mxro.shef
 Bundle-Version: 0.0.2.SNAPSHOT
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
