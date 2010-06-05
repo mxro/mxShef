@@ -4,8 +4,7 @@ Bundle-Name: mxShef
 Bundle-SymbolicName: de.mxro.shef
 Bundle-Version: 0.0.2.SNAPSHOT
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Bundle-ClassPath: src/main/resources/sam.jar,
- .
+Bundle-ClassPath: .
 Import-Package: de.mxro.swing,
  de.mxro.swing.actions,
  de.mxro.swing.dialogwizard,
@@ -24,5 +23,9 @@ Import-Package: de.mxro.swing,
  net.atlanticbb.tantlinger.shef,
  net.atlanticbb.tantlinger.ui,
  net.atlanticbb.tantlinger.ui.text,
- net.atlanticbb.tantlinger.ui.text.actions
+ net.atlanticbb.tantlinger.ui.text.actions,
+ org.bushe.lang.reflect,
+ org.bushe.swing,
+ org.bushe.swing.action,
+ org.bushe.swing.exception
 Export-Package: de.mxro.shef

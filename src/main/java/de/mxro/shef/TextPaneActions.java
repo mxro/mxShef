@@ -4,12 +4,15 @@ import javax.swing.Action;
 import javax.swing.JTextPane;
 import javax.swing.event.CaretEvent;
 import javax.swing.event.CaretListener;
+
 import net.atlanticbb.tantlinger.ui.text.actions.CopyAction;
 import net.atlanticbb.tantlinger.ui.text.actions.CutAction;
 import net.atlanticbb.tantlinger.ui.text.actions.HTMLAlignAction;
 import net.atlanticbb.tantlinger.ui.text.actions.HTMLInlineAction;
+import net.atlanticbb.tantlinger.ui.text.actions.HTMLLinkAction;
 import net.atlanticbb.tantlinger.ui.text.actions.HTMLTextEditAction;
 import net.atlanticbb.tantlinger.ui.text.actions.PasteFormattedAction;
+
 import org.bushe.swing.action.ActionList;
 import org.bushe.swing.action.BasicAction;
 
@@ -38,7 +41,7 @@ public class TextPaneActions {
 
         // see HTMLEditorActionFactory
 
-        hyperlinkAction = new net.atlanticbb.tantlinger.ui.text.actions.HTMLLinkAction();
+        hyperlinkAction = new HTMLLinkAction();
         list.add(hyperlinkAction);
 
 
