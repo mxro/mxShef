@@ -1,9 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="src" output="target/test-classes" path="src/test/java"/>
+	<classpathentry including="**/*.java" kind="src" output="target/test-classes" path="src/test/java"/>
 	<classpathentry kind="src" path="src/main/java"/>
-	<classpathentry kind="con" path="org.eclipse.iam.jdt.core.mavenClasspathContainer"/>
+	<classpathentry excluding="**/*.java" including="**" kind="src" path="src/main/resources"/>
+	<classpathentry exported="true" kind="lib" path="mxSwing-0.0.2-SNAPSHOT.jar"/>
+	<classpathentry exported="true" kind="lib" path="mxTransferable-0.0.3-SNAPSHOT.jar"/>
+	<classpathentry exported="true" kind="lib" path="mxUtilities-0.0.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="thrdShef-0.0.3-SNAPSHOT.jar"/>
+	<classpathentry exported="true" kind="lib" path="thrdSwingActionManager-0.0.3.jar"/>
+	<classpathentry exported="true" kind="lib" path="thrdSwingApplicationFramework-1.03.3-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="beansbinding-1.2.1.jar"/>
+	<classpathentry kind="lib" path="javaws-1.0.jar"/>
+	<classpathentry kind="lib" path="swing-worker-1.1.jar" sourcepath="/Users/mx/.m2/repository/org/swinglabs/swing-worker/1.1/swing-worker-1.1-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/Users/mx/.m2/repository/org/swinglabs/swing-worker/1.1/swing-worker-1.1-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
 	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

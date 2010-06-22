@@ -1,10 +1,9 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: mxShef
-Bundle-SymbolicName: de.mxro.shef
+Bundle-Name: Unnamed - de.mxro.shef:mxShef:bundle:0.0.2-SNAPSHOT
+Bundle-SymbolicName: mxShef;singleton:=true
 Bundle-Version: 0.0.2.SNAPSHOT
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Bundle-ClassPath: .
 Import-Package: de.mxro.swing,
  de.mxro.swing.actions,
  de.mxro.swing.dialogwizard,
@@ -29,3 +28,13 @@ Import-Package: de.mxro.swing,
  org.bushe.swing.action,
  org.bushe.swing.exception
 Export-Package: de.mxro.shef
+Bundle-ClassPath: .,
+ javaws-1.0.jar,
+ beansbinding-1.2.1.jar,
+ swing-worker-1.1.jar,
+ mxSwing-0.0.2-SNAPSHOT.jar,
+ mxTransferable-0.0.3-SNAPSHOT.jar,
+ mxUtilities-0.0.1.jar,
+ thrdShef-0.0.3-SNAPSHOT.jar,
+ thrdSwingActionManager-0.0.3.jar,
+ thrdSwingApplicationFramework-1.03.3-SNAPSHOT.jar
