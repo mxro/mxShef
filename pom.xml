@@ -83,7 +83,7 @@
  org.bushe.lang.reflect,
  org.bushe.swing,
  org.bushe.swing.action,
- org.bushe.swing.exception,!*</Import-Package>
+ org.bushe.swing.exception,*</Import-Package>
 						<Export-Package>de.mxro.shef</Export-Package>
 					</instructions>
 				</configuration>
@@ -148,6 +148,28 @@
           <target>1.6</target>
         </configuration>
       </plugin>
+      
+      <!--
+				Keep the MANIFEST.MF used by eclipse in sync with the MANIFEST.MF
+				created by the maven bundle plugin
+			-->
+			<plugin>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+						<configuration>
+							<tasks>
+								<delete file="${basedir}/META-INF/MANIFEST.MF" />
+								<copy file="target/classes/META-INF/MANIFEST.MF" tofile="${basedir}/META-INF/MANIFEST.MF" />
+							</tasks>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
       
       <!-- <plugin>
       	<groupId>org.apache.maven.plugins</groupId>

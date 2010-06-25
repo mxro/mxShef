@@ -1,45 +1,18 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>mxShef</name>
-	<comment>NO_M2ECLIPSE_SUPPORT: Project files created with the maven-eclipse-plugin are not supported in M2Eclipse.</comment>
-	<projects>
-	</projects>
-	<buildSpec>
-		<buildCommand>
-			<name>org.eclipse.pde.ManifestBuilder</name>
-			<arguments>
-			</arguments>
-		</buildCommand>
-		<buildCommand>
-			<name>org.eclipse.pde.SchemaBuilder</name>
-			<arguments>
-			</arguments>
-		</buildCommand>
-		<buildCommand>
-			<name>org.eclipse.jdt.core.javabuilder</name>
-			<arguments>
-			</arguments>
-		</buildCommand>
-	</buildSpec>
-	<natures>
-		<nature>org.eclipse.pde.PluginNature</nature>
-		<nature>org.eclipse.jdt.core.javanature</nature>
-	</natures>
-	<linkedResources>
-		<link>
-			<name>beansbinding-1.2.1.jar</name>
-			<type>1</type>
-			<location>/Users/mx/.m2/repository/org/jdesktop/beansbinding/1.2.1/beansbinding-1.2.1.jar</location>
-		</link>
-		<link>
-			<name>javaws-1.0.jar</name>
-			<type>1</type>
-			<location>/Users/mx/.m2/repository/com/sun/javaws/1.0/javaws-1.0.jar</location>
-		</link>
-		<link>
-			<name>swing-worker-1.1.jar</name>
-			<type>1</type>
-			<location>/Users/mx/.m2/repository/org/swinglabs/swing-worker/1.1/swing-worker-1.1.jar</location>
-		</link>
-	</linkedResources>
+  <name>mxShef</name>
+  <comment>NO_M2ECLIPSE_SUPPORT: Project files created with the maven-eclipse-plugin are not supported in M2Eclipse.</comment>
+  <projects>
+    <project>mxSwing</project>
+    <project>mxTransferable</project>
+    <project>mxUtilities</project>
+    <project>thrdSwingActionManager</project>
+  </projects>
+  <buildSpec>
+    <buildCommand>
+      <name>org.eclipse.jdt.core.javabuilder</name>
+    </buildCommand>
+  </buildSpec>
+  <natures>
+    <nature>org.eclipse.jdt.core.javanature</nature>
+  </natures>
 </projectDescription>
