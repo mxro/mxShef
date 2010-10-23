@@ -3,18 +3,9 @@
   <classpathentry kind="src" path="src/main/java"/>
   <classpathentry kind="src" path="src/main/resources" including="**" excluding="**/*.java"/>
   <classpathentry kind="output" path="target/classes"/>
-  <classpathentry kind="var" path="M2_REPO/org/jdesktop/beansbinding/1.2.1/beansbinding-1.2.1.jar"/>
-  <classpathentry kind="var" path="M2_REPO/com/sun/javaws/1.0/javaws-1.0.jar"/>
-  <classpathentry kind="src" path="/mxSwing"/>
-  <classpathentry kind="src" path="/mxTransferable"/>
-  <classpathentry kind="src" path="/mxUtilities"/>
-  <classpathentry kind="var" path="M2_REPO/org/swinglabs/swing-worker/1.1/swing-worker-1.1.jar" sourcepath="M2_REPO/org/swinglabs/swing-worker/1.1/swing-worker-1.1-sources.jar">
-    <attributes>
-      <attribute value="jar:file:/Users/mx/.m2/repository/org/swinglabs/swing-worker/1.1/swing-worker-1.1-javadoc.jar!/" name="javadoc_location"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry kind="var" path="M2_REPO/org/sourceforge/shef/thrdShef/0.0.3-SNAPSHOT/thrdShef-0.0.3-SNAPSHOT.jar"/>
-  <classpathentry kind="src" path="/thrdSwingActionManager"/>
-  <classpathentry kind="var" path="M2_REPO/de/mxro/thrd/swingapplicationframework/thrdSwingApplicationFramework/1.03.3/thrdSwingApplicationFramework-1.03.3.jar"/>
+  <classpathentry kind="lib" path="beansbinding-1.2.1.jar"/>
+  <classpathentry kind="lib" path="javaws-1.0.jar"/>
+  <classpathentry kind="lib" path="swing-worker-1.1.jar"/>
   <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+  <classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
 </classpath>
