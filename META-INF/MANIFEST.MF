@@ -1,15 +1,15 @@
 Manifest-Version: 1.0
 Export-Package: de.mxro.shef;uses:="javax.swing.text,javax.swing.text.
- html,javax.swing,de.mxro.swing,javax.swing.event,de.mxro.utils,de.mxr
- o.transferable,net.atlanticbb.tantlinger.ui.text,javax.swing.undo,jav
- ax.swing.plaf,net.atlanticbb.tantlinger.ui.text.actions,org.bushe.swi
- ng.action"
+ html,javax.swing,de.mxro.swing,javax.swing.event,mx.gwtutils,de.mxro.
+ transferable,de.mxro.utils,net.atlanticbb.tantlinger.ui.text,javax.sw
+ ing.undo,javax.swing.plaf,net.atlanticbb.tantlinger.ui.text.actions,o
+ rg.bushe.swing.action"
 Built-By: Max
 Build-Jdk: 1.6.0_22
 Bundle-Version: 0.0.2.SNAPSHOT
 Tool: Bnd-0.0.357
 Bundle-Name: mxShef
-Bnd-LastModified: 1287778727001
+Bnd-LastModified: 1290825059498
 Created-By: Apache Maven Bundle Plugin
 Bundle-ManifestVersion: 2
 Bundle-SymbolicName: mxShef
@@ -19,8 +19,9 @@ Import-Package: de.mxro.shef,de.mxro.swing,de.mxro.swing.actions,de.mx
  de.mxro.utils.domain,de.mxro.utils.domain.authentication,de.mxro.util
  s.drm,de.mxro.utils.gwt,de.mxro.utils.history,de.mxro.utils.log,de.mx
  ro.utils.progress,javax.swing,javax.swing.event,javax.swing.plaf,java
- x.swing.text,javax.swing.text.html,javax.swing.undo,net.atlanticbb.ta
- ntlinger.shef,net.atlanticbb.tantlinger.ui,net.atlanticbb.tantlinger.
- ui.text,net.atlanticbb.tantlinger.ui.text.actions,org.bushe.lang.refl
- ect,org.bushe.swing,org.bushe.swing.action,org.bushe.swing.exception
+ x.swing.text,javax.swing.text.html,javax.swing.undo,mx.gwtutils,net.a
+ tlanticbb.tantlinger.shef,net.atlanticbb.tantlinger.ui,net.atlanticbb
+ .tantlinger.ui.text,net.atlanticbb.tantlinger.ui.text.actions,org.bus
+ he.lang.reflect,org.bushe.swing,org.bushe.swing.action,org.bushe.swin
+ g.exception
 

@@ -164,7 +164,7 @@ public class EditorDropTarget implements DropTargetListener {
 	    	}
 
 	    	
-	    	String extension = de.mxro.utils.Utils.getExtension(transferFile.getAbsolutePath());
+	    	String extension = mx.gwtutils.MxroGWTUtils.getExtension(transferFile.getAbsolutePath());
 	    	if (extension.equals("png") || extension.equals("jpg") || extension.equals("gif") ||
 	    			extension.equals("jpeg")) {
 	    		((HTMLEditorKit) pane.getEditorKit()).insertHTML((HTMLDocument) pane.getDocument(), pane.getCaretPosition(), "<img src='"+uri +"'/>", 0, 0, HTML.Tag.IMG);
