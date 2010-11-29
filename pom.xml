@@ -75,15 +75,7 @@
  de.mxro.utils.gwt,
  de.mxro.utils.history,
  de.mxro.utils.log,
- de.mxro.utils.progress,
- net.atlanticbb.tantlinger.shef,
- net.atlanticbb.tantlinger.ui,
- net.atlanticbb.tantlinger.ui.text,
- net.atlanticbb.tantlinger.ui.text.actions,
- org.bushe.lang.reflect,
- org.bushe.swing,
- org.bushe.swing.action,
- org.bushe.swing.exception,*</Import-Package>
+ de.mxro.utils.progress,*</Import-Package>
 						<Export-Package>de.mxro.shef</Export-Package>
 					</instructions>
 				</configuration>
