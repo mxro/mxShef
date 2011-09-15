@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>de.mxro.shef</groupId>
-  <artifactId>mxShef</artifactId>
-  <version>0.0.2-SNAPSHOT</version>
-   <packaging>bundle</packaging>
-  
-  <build>
-  	<!-- Resources -->
-    <resources>
-			<!-- This entry makes sure that resources, which lie in the same package as
-			     Java classes, are copied into the target. Often external libraries
-			     require resources, which are loaded using Class.getResource or
-			     Class.getResourceAsStream and which are in a subpackage of the class.
-			     For instance, the NetBeans template for the Swing Application Framework
-			     does so.  -->
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>de.mxro.shef</groupId>
+	<artifactId>mxShef</artifactId>
+	<version>0.0.2-SNAPSHOT</version>
+	<packaging>bundle</packaging>
+
+	<build>
+		<!-- Resources -->
+		<resources>
+			<!-- This entry makes sure that resources, which lie in the same package 
+				as Java classes, are copied into the target. Often external libraries require 
+				resources, which are loaded using Class.getResource or Class.getResourceAsStream 
+				and which are in a subpackage of the class. For instance, the NetBeans template 
+				for the Swing Application Framework does so. -->
 			<resource>
 				<filtering>false</filtering>
 				<directory>src/main/java</directory>
@@ -23,33 +22,33 @@
 				</includes>
 				<excludes>
 					<exclude>**/*.java</exclude>
-				</excludes> 
+				</excludes>
 			</resource>
-			<!-- This entry makes sure component definitions for OSGi declarative services
-			     are copied into the destination  -->
+			<!-- This entry makes sure component definitions for OSGi declarative 
+				services are copied into the destination -->
 			<resource>
 				<targetPath>OSGI-INF</targetPath>
 				<filtering>false</filtering>
 				<directory>OSGI-INF</directory>
-			    <includes>
+				<includes>
 					<include>**</include>
 				</includes>
 			</resource>
-			<!-- I really do not know why know a manual entry for src/main/resources is 
-			     necessary? It should be included following the Maven convention. -->
-			<resource>		
+			<!-- I really do not know why know a manual entry for src/main/resources 
+				is necessary? It should be included following the Maven convention. -->
+			<resource>
 				<filtering>false</filtering>
 				<directory>src/main/resources</directory>
-			    <includes>
+				<includes>
 					<include>**</include>
 				</includes>
 			</resource>
-    </resources>
-    <!-- Resources End -->
+		</resources>
+		<!-- Resources End -->
 
-    <plugins>
-      
-        <!--  The Maven bundle plugin generates Meta-data required for OSGi  -->
+		<plugins>
+
+			<!-- The Maven bundle plugin generates Meta-data required for OSGi -->
 			<plugin>
 				<groupId>org.apache.felix</groupId>
 				<artifactId>maven-bundle-plugin</artifactId>
@@ -59,23 +58,23 @@
 					<instructions>
 						<Bundle-SymbolicName>${pom.artifactId}</Bundle-SymbolicName>
 						<Bundle-Version>${pom.version}</Bundle-Version>
-						<!-- <Embed-Dependency>*;scope=compile|runtime;inline=false</Embed-Dependency>
-						<Embed-Directory>target/dependency</Embed-Directory> -->
-						 <Import-Package>de.mxro.swing,
- de.mxro.swing.actions,
- de.mxro.swing.dialogwizard,
- de.mxro.transferable,
- de.mxro.utils,
- de.mxro.utils.application,
- de.mxro.utils.background,
- de.mxro.utils.distributedtree,
- de.mxro.utils.domain,
- de.mxro.utils.domain.authentication,
- de.mxro.utils.drm,
- de.mxro.utils.gwt,
- de.mxro.utils.history,
- de.mxro.utils.log,
- de.mxro.utils.progress,*</Import-Package>
+						<!-- <Embed-Dependency>*;scope=compile|runtime;inline=false</Embed-Dependency> 
+							<Embed-Directory>target/dependency</Embed-Directory> -->
+						<Import-Package>de.mxro.swing,
+							de.mxro.swing.actions,
+							de.mxro.swing.dialogwizard,
+							de.mxro.transferable,
+							de.mxro.utils,
+							de.mxro.utils.application,
+							de.mxro.utils.background,
+							de.mxro.utils.distributedtree,
+							de.mxro.utils.domain,
+							de.mxro.utils.domain.authentication,
+							de.mxro.utils.drm,
+							de.mxro.utils.gwt,
+							de.mxro.utils.history,
+							de.mxro.utils.log,
+							de.mxro.utils.progress,*</Import-Package>
 						<Export-Package>de.mxro.shef</Export-Package>
 					</instructions>
 				</configuration>
@@ -85,20 +84,10 @@
 				<artifactId>maven-dependency-plugin</artifactId>
 
 				<executions>
-					<!--
-						This additional execution can extract all the JARs of the
-						dependencies
-					-->
-					<!-- <execution>
-						<id>unpack-dependencies</id>
-						<phase>generate-resources</phase>
-						<goals>
-							<goal>unpack-dependencies</goal>
-						</goals>
-						<configuration>
-							<includeGroupIds>org.w3c.tidy</includeGroupIds>
-						</configuration>
-					</execution>-->
+					<!-- This additional execution can extract all the JARs of the dependencies -->
+					<!-- <execution> <id>unpack-dependencies</id> <phase>generate-resources</phase> 
+						<goals> <goal>unpack-dependencies</goal> </goals> <configuration> <includeGroupIds>org.w3c.tidy</includeGroupIds> 
+						</configuration> </execution> -->
 
 					<execution>
 						<id>copy-dependencies</id>
@@ -112,11 +101,11 @@
 							<overWriteSnapshots>false</overWriteSnapshots>
 							<overWriteIfNewer>true</overWriteIfNewer>
 						</configuration>
-					</execution> 
+					</execution>
 				</executions>
 			</plugin>
 
-			<!--  Cleanup necessary because of PDE tweaks -->
+			<!-- Cleanup necessary because of PDE tweaks -->
 			<plugin>
 				<artifactId>maven-clean-plugin</artifactId>
 				<version>2.3</version>
@@ -132,19 +121,17 @@
 					</filesets>
 				</configuration>
 			</plugin>
-      
-      <plugin>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <configuration>
-          <source>1.6</source>
-          <target>1.6</target>
-        </configuration>
-      </plugin>
-      
-      <!--
-				Keep the MANIFEST.MF used by eclipse in sync with the MANIFEST.MF
-				created by the maven bundle plugin
-			-->
+
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+				</configuration>
+			</plugin>
+
+			<!-- Keep the MANIFEST.MF used by eclipse in sync with the MANIFEST.MF 
+				created by the maven bundle plugin -->
 			<plugin>
 				<artifactId>maven-antrun-plugin</artifactId>
 				<executions>
@@ -162,58 +149,54 @@
 					</execution>
 				</executions>
 			</plugin>
-      
-      <!-- <plugin>
-      	<groupId>org.apache.maven.plugins</groupId>
-      	<artifactId>maven-jar-plugin</artifactId>
-      	<configuration>
-      		<archive>
-      			<manifestFile>META-INF/MANIFEST.MF</manifestFile>
-      		</archive>
-        </configuration>
-      </plugin> -->
-      
-    </plugins>
-  </build>
-  
-  
-  <dependencies>
-  	<dependency>
-  		<groupId>de.mxro.swing</groupId>
-  		<artifactId>mxSwing</artifactId>
-  		<version>[0.0.1,)</version>
-  		<optional>false</optional>
-  	</dependency>
-  	<dependency>
-  		<groupId>org.sourceforge.shef</groupId>
-  		<artifactId>thrdShef</artifactId>
-  		<version>0.0.3-SNAPSHOT</version>
-  		<optional>false</optional>
-  	</dependency>
-  	<dependency>
-  		<groupId>de.mxro.transferable</groupId>
-  		<artifactId>mxTransferable</artifactId>
-  		<version>[0.0.1,)</version>
-  		<optional>false</optional>
-  	</dependency>
-  	<dependency>
-  		<groupId>de.mxro.thrd.swingactionmanager</groupId>
-  		<artifactId>thrdSwingActionManager</artifactId>
-  		<version>[0.0.1,)</version>
-  		<optional>false</optional>
-  	</dependency>
-  </dependencies>
-  <distributionManagement>
-        <repository>
-            <id>releases</id>
-            <name>Internal Releases</name>
-            <url>http://internal1.nxweb.de:8080/nexus/content/repositories/releases</url>
-        </repository>
-        <snapshotRepository>
-            <id>snapshots</id>
-            <name>Internal Snapshots</name>
-            <url>http://internal1.nxweb.de:8080/nexus/content/repositories/snapshots</url>
-        </snapshotRepository>
-    </distributionManagement>
-  
+
+			<!-- <plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-jar-plugin</artifactId> 
+				<configuration> <archive> <manifestFile>META-INF/MANIFEST.MF</manifestFile> 
+				</archive> </configuration> </plugin> -->
+
+		</plugins>
+	</build>
+
+
+	<dependencies>
+		<dependency>
+			<groupId>de.mxro.swing</groupId>
+			<artifactId>mxSwing</artifactId>
+			<version>[0.0.1,)</version>
+			<optional>false</optional>
+		</dependency>
+		<dependency>
+			<groupId>org.sourceforge.shef</groupId>
+			<artifactId>thrdShef</artifactId>
+			<version>0.0.3-SNAPSHOT</version>
+			<optional>false</optional>
+		</dependency>
+		<dependency>
+			<groupId>de.mxro.transferable</groupId>
+			<artifactId>mxTransferable</artifactId>
+			<version>[0.0.1,)</version>
+			<optional>false</optional>
+		</dependency>
+		<dependency>
+			<groupId>de.mxro.thrd.swingactionmanager</groupId>
+			<artifactId>thrdSwingActionManager</artifactId>
+			<version>[0.0.1,)</version>
+			<optional>false</optional>
+		</dependency>
+	</dependencies>
+	<distributionManagement>
+		<repository>
+			<id>releases</id>
+			<name>Internal Releases</name>
+			<url>http://internal1.nxweb.de:8080/nexus/content/repositories/releases
+			</url>
+		</repository>
+		<snapshotRepository>
+			<id>snapshots</id>
+			<name>Internal Snapshots</name>
+			<url>http://internal1.nxweb.de:8080/nexus/content/repositories/snapshots
+			</url>
+		</snapshotRepository>
+	</distributionManagement>
+
 </project>

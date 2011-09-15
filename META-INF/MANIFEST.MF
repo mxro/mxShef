@@ -4,12 +4,12 @@ Export-Package: de.mxro.shef;uses:="javax.swing.text,javax.swing.text.
  transferable,de.mxro.utils,net.atlanticbb.tantlinger.ui.text,javax.sw
  ing.undo,javax.swing.plaf,net.atlanticbb.tantlinger.ui.text.actions,o
  rg.bushe.swing.action"
-Built-By: Max
-Build-Jdk: 1.6.0_22
+Built-By: mroh004
+Build-Jdk: 1.6.0_27
 Bundle-Version: 0.0.2.SNAPSHOT
 Tool: Bnd-0.0.357
 Bundle-Name: mxShef
-Bnd-LastModified: 1291002579589
+Bnd-LastModified: 1316055147098
 Created-By: Apache Maven Bundle Plugin
 Bundle-ManifestVersion: 2
 Bundle-SymbolicName: mxShef
