@@ -1,15 +1,9 @@
 package de.mxro.shef;
 
-import java.awt.Component;
-import java.awt.Desktop;
-import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.InputEvent;
 import java.awt.event.KeyEvent;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
 import java.io.IOException;
-import java.net.URI;
 import java.util.Vector;
 
 import javax.swing.AbstractAction;
@@ -20,8 +14,6 @@ import javax.swing.event.CaretEvent;
 import javax.swing.event.CaretListener;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
-import javax.swing.event.HyperlinkEvent;
-import javax.swing.event.HyperlinkListener;
 import javax.swing.text.BadLocationException;
 import javax.swing.text.Element;
 import javax.swing.text.View;
@@ -31,13 +23,8 @@ import javax.swing.text.html.HTMLDocument;
 import javax.swing.text.html.HTMLEditorKit;
 import javax.swing.text.html.StyleSheet;
 
-//import org.dts.spell.swing.JTextComponentSpellChecker;
-
-
-import de.mxro.swing.JMyPanel;
 import de.mxro.transferable.ClipboardFacade;
 import de.mxro.transferable.CutAndPaste;
-import de.mxro.shef.EditorDropTarget;
 import de.mxro.utils.FileHandler;
 
 
@@ -66,7 +53,7 @@ public static class MyEditorKit extends HTMLEditorKit {
 			
 			
 			@Override
-			public View create(Element elem) {
+			public View create(final Element elem) {
 				if (elem.getName().equals("br"))
 					return new BRView(elem);
 				return super.create(elem);
@@ -117,13 +104,13 @@ public static class MyEditorKit extends HTMLEditorKit {
 	 * see GoogleDocsFileHandler
 	 * @param handler
 	 */
-	public void addFileHandler(FileHandler handler) {
+	public void addFileHandler(final FileHandler handler) {
 		fileHandler.add(handler);
 	}
 	
 	
-	public String handleFile(java.io.File file) {
-		for (FileHandler handler : fileHandler) {
+	public String handleFile(final java.io.File file) {
+		for (final FileHandler handler : fileHandler) {
 			if (handler.canHandle(file)) {
 				return handler.uploadFile(file);
 			}
@@ -138,7 +125,7 @@ public static class MyEditorKit extends HTMLEditorKit {
 	
     public void initializeEvents() {
     	
-    	MyLinkController controller = new MyLinkController();
+    	final MyLinkController controller = new MyLinkController();
     	this.addMouseListener(controller);
     	this.addMouseListener(controller);
     	
@@ -165,7 +152,8 @@ public static class MyEditorKit extends HTMLEditorKit {
 		    
 			private static final long serialVersionUID = 1L;
 
-			public void  actionPerformed(ActionEvent e) {
+			@Override
+			public void  actionPerformed(final ActionEvent e) {
 				
 				try {
 					
@@ -184,7 +172,8 @@ public static class MyEditorKit extends HTMLEditorKit {
     	
     	this.addCaretListener(new CaretListener() {
 
-			public void caretUpdate(CaretEvent arg0) {
+			@Override
+			public void caretUpdate(final CaretEvent arg0) {
 				if (arg0.getMark() > getDocument().getLength()-1) {
 					
 					if (getDocument().getLength()>0) {
@@ -203,7 +192,8 @@ public static class MyEditorKit extends HTMLEditorKit {
 		    
 			private static final long serialVersionUID = 1L;
 
-			public void  actionPerformed(ActionEvent e) {
+			@Override
+			public void  actionPerformed(final ActionEvent e) {
 				try {
 					final int offset = getCaretPosition();
 					((HTMLEditorKit) getEditorKit()).insertHTML((HTMLDocument) getDocument(), offset, "<br>", 0, 0, HTML.Tag.BR);
@@ -221,17 +211,21 @@ public static class MyEditorKit extends HTMLEditorKit {
     	
     	this.getDocument().addDocumentListener(new DocumentListener() {
 
-			public void changedUpdate(DocumentEvent arg0) {
+			@Override
+			public void changedUpdate(final DocumentEvent arg0) {
 				
 			}
 
-			public void insertUpdate(DocumentEvent arg0) {
+			@Override
+			public void insertUpdate(final DocumentEvent arg0) {
 				
 			}
 
-			public void removeUpdate(DocumentEvent arg0) {
+			@Override
+			public void removeUpdate(final DocumentEvent arg0) {
 				SwingUtilities.invokeLater(new Runnable() {
 					
+					@Override
 					public void run() {
 						if (!((HTMLDocument) MxroEditorPane.this.getDocument()).getCharacterElement(MxroEditorPane.this.getDocument().getLength()-1).getName().equals("br")) {
 							try {
