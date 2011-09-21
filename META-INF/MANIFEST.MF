@@ -6,10 +6,10 @@ Export-Package: de.mxro.shef;uses:="javax.swing.text,javax.swing.text.
  rg.bushe.swing.action"
 Built-By: mroh004
 Build-Jdk: 1.6.0_27
-Bundle-Version: 0.0.2
+Bundle-Version: 0.0.3.SNAPSHOT
 Tool: Bnd-0.0.357
 Bundle-Name: mxShef
-Bnd-LastModified: 1316210744783
+Bnd-LastModified: 1316210800630
 Created-By: Apache Maven Bundle Plugin
 Bundle-ManifestVersion: 2
 Bundle-SymbolicName: mxShef
