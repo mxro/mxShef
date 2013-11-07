@@ -81,29 +81,7 @@
 			</plugin>
 
 			<plugin>
-				<artifactId>maven-dependency-plugin</artifactId>
-
-				<executions>
-					<!-- This additional execution can extract all the JARs of the dependencies -->
-					<!-- <execution> <id>unpack-dependencies</id> <phase>generate-resources</phase> 
-						<goals> <goal>unpack-dependencies</goal> </goals> <configuration> <includeGroupIds>org.w3c.tidy</includeGroupIds> 
-						</configuration> </execution> -->
-
-					<execution>
-						<id>copy-dependencies</id>
-						<phase>process-sources</phase>
-						<goals>
-							<goal>copy-dependencies</goal>
-						</goals>
-						<configuration>
-							<outputDirectory>${basedir}</outputDirectory>
-							<overWriteReleases>false</overWriteReleases>
-							<overWriteSnapshots>false</overWriteSnapshots>
-							<overWriteIfNewer>true</overWriteIfNewer>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
+				<artifactId>maven-dependency-plugin</artifactId></plugin>
 
 			<!-- Cleanup necessary because of PDE tweaks -->
 			<plugin>
@@ -155,7 +133,7 @@
 				</archive> </configuration> </plugin> -->
 
 		</plugins>
-	</build>
+	<extensions><extension><groupId>org.apache.maven.wagon</groupId><artifactId>wagon-ssh-external</artifactId><version>2.5</version></extension><extension><groupId>org.apache.maven.wagon</groupId><artifactId>wagon-ssh</artifactId><version>2.5</version></extension></extensions></build>
 
 
 	<dependencies>
@@ -184,19 +162,6 @@
 			<optional>false</optional>
 		</dependency>
 	</dependencies>
-	<distributionManagement>
-		<repository>
-			<id>releases</id>
-			<name>Internal Releases</name>
-			<url>http://internal1.nxweb.de:8080/nexus/content/repositories/releases
-			</url>
-		</repository>
-		<snapshotRepository>
-			<id>snapshots</id>
-			<name>Internal Snapshots</name>
-			<url>http://internal1.nxweb.de:8080/nexus/content/repositories/snapshots
-			</url>
-		</snapshotRepository>
-	</distributionManagement>
+	<distributionManagement><repository><id>appjangle-releases</id><url>${repos.appjangle-releases}</url></repository><snapshotRepository><id>mvn1-appjangle</id><url>${repos.mvn1-appjangle}</url></snapshotRepository></distributionManagement>
 
 </project>
