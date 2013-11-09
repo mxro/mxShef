@@ -144,9 +144,9 @@
 			<optional>false</optional>
 		</dependency>
 		<dependency>
-			<groupId>org.sourceforge.shef</groupId>
+			<groupId>de.mxro.thrd.shef</groupId>
 			<artifactId>thrdShef</artifactId>
-			<version>0.0.3-SNAPSHOT</version>
+			<version>[0.0.1,)</version>
 			<optional>false</optional>
 		</dependency>
 		<dependency>
