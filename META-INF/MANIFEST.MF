@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Bnd-LastModified: 1383969340165
+Bnd-LastModified: 1383969516087
 Build-Jdk: 1.7.0_25
 Built-By: adminuser
 Bundle-ManifestVersion: 2
@@ -15,12 +15,12 @@ Import-Package: de.mxro.swing;version="[0.0,1)",de.mxro.transferable;ver
  event,javax.swing.plaf,javax.swing.text,javax.swing.text.html,javax.swi
  ng.undo,mx.gwtutils;version="[0.0,1)",net.atlanticbb.tantlinger.ui.text
  ,net.atlanticbb.tantlinger.ui.text.actions,org.bushe.swing.action;versi
- on="[0.0,1)",de.mxro.utils.gwt;version="[0.0,1)",de.mxro.utils.applicat
- ion;version="[0.0,1)",de.mxro.utils.log;version="[0.0,1)",de.mxro.utils
- .background;version="[0.0,1)",de.mxro.utils.domain;version="[0.0,1)",de
- .mxro.utils.drm;version="[0.0,1)",de.mxro.utils.progress;version="[0.0,
- 1)",de.mxro.utils.distributedtree;version="[0.0,1)",de.mxro.swing.actio
- ns;version="[0.0,1)",de.mxro.utils.domain.authentication;version="[0.0,
- 1)",de.mxro.swing.dialogwizard;version="[0.0,1)",de.mxro.utils.history;
+ on="[0.0,1)",de.mxro.utils.gwt;version="[0.0,1)",de.mxro.utils.progress
+ ;version="[0.0,1)",de.mxro.utils.background;version="[0.0,1)",de.mxro.u
+ tils.history;version="[0.0,1)",de.mxro.utils.domain.authentication;vers
+ ion="[0.0,1)",de.mxro.utils.domain;version="[0.0,1)",de.mxro.swing.acti
+ ons;version="[0.0,1)",de.mxro.utils.log;version="[0.0,1)",de.mxro.utils
+ .distributedtree;version="[0.0,1)",de.mxro.utils.drm;version="[0.0,1)",
+ de.mxro.swing.dialogwizard;version="[0.0,1)",de.mxro.utils.application;
  version="[0.0,1)"
 Tool: Bnd-2.1.0.20130426-122213
